@@ -5,6 +5,7 @@ using TMPro;
 
 public class jogo_sbs : MonoBehaviour
 {
+
     public float forcaFrente = 30f;
     public float forcaLado = 30f;
     public float velocidadeMaxima = 10f;
@@ -33,7 +34,6 @@ public class jogo_sbs : MonoBehaviour
 
         AtualizarTextos();
     }
-
     void FixedUpdate()
     {
         if (variavel == null) return;
