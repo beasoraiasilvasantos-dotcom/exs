@@ -12,6 +12,9 @@ public class jogo_sbs : MonoBehaviour
 
     public TMP_Text textoVida;
     public TMP_Text textoDinheiro;
+    public AudioSource som;
+    public AudioClip sombom;
+    public AudioClip sommau;    
 
     private int vida = 10;
     private int dinheiro = 0;
@@ -75,6 +78,7 @@ public class jogo_sbs : MonoBehaviour
         if (quem.gameObject.tag == "mau")
         {
             vida--;
+            som.PlayOneShot(sommau);
             AtualizarTextos();
             Destroy(quem.gameObject);
 
@@ -90,6 +94,7 @@ public class jogo_sbs : MonoBehaviour
         if (quem.gameObject.tag == "bom")
         {
             dinheiro += 10;
+            som.PlayOneShot(sombom);
             AtualizarTextos();
             Destroy(quem.gameObject);
         }
